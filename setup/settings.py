@@ -46,6 +46,9 @@ INSTALLED_APPS = [
     'django.contrib.sites',
 ]
 
+SITE_ID = 1
+LOGIN_URL = '/accounts/login/' 
+
 AUTHENTICATION_BACKENDS = [
 
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -157,3 +160,11 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
+LOGIN_REDIRECT_URL = '/members'
+
+SOCIALACCOUNT_LOGIN_ON_GET = True
+
+ACCOUNT_LOGOUT_ON_GET = True
+
+ACCOUNT_REDIRECT_URL = '/'
